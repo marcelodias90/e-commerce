@@ -15,7 +15,7 @@ export class ProdutoService {
   async Criar(produto: ProdutoDto): Promise<Produto> {
     const existeProduto = await this.produtoRepository.buscaPorNome(produto?.nome)
     if (existeProduto) {
-      throw new ExistenteExcecao('Cliente', 'nome')
+      throw new ExistenteExcecao('Produto', 'nome')
     }
     return await this.produtoRepository.create(produto)
   }
