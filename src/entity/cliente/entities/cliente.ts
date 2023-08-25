@@ -8,8 +8,8 @@ export class Cliente {
   @Column({ length: 100 })
   nome: string;
 
-  @Column('int')
-  cpf: Number;
+  @Column()
+  cpf: string;
 
   @Column({ length: 100 })
   email: string;

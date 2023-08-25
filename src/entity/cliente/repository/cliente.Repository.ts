@@ -38,8 +38,8 @@ export class ClienteRepository {
     });
  }
 
- async save(cliente: ClienteDto): Promise<Cliente> {
-  const novoCliente = await this.Repository.save(cliente);
-   return  novoCliente;
+ async create(cliente: ClienteDto): Promise<ClienteDto> {
+  const novoCliente = this.Repository.create(cliente)
+  return await this.Repository.save(novoCliente);
  }
 }
