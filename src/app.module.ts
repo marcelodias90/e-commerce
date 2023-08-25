@@ -15,7 +15,7 @@ import { ClienteModule } from './entity/cliente/modules/cliente.modules';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
-      entities: [`${__dirname}/entity/cliente/entities/**/{.ts,*.js}`],
+      entities: [`${__dirname}/entity/**/entities/**/{.ts,*.js}`],
       migrations: [`${__dirname}/migration/{.ts,*.js}`],
       migrationsRun: true,
       extra: {
