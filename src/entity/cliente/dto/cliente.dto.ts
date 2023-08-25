@@ -1,4 +1,4 @@
-import { Cliente } from "../cliente";
+import { Cliente } from "../entities/cliente";
 
 export class ClienteDto extends Cliente{
     readonly nome: string;
