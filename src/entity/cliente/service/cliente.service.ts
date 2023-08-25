@@ -20,4 +20,20 @@ export class ClienteService {
     }
      return await this.clienteRepository.create(cliente)
  }
+
+  async atualiza(id: number, cliente: ClienteDto): Promise<void> {
+    const existeCliente = await this.clienteRepository.buscaPorId(id)
+    if(!existeCliente){
+      throw new Error('Não existe um Cliente com esse id!')
+    }
+      await this.clienteRepository.update(id , cliente)
+ }
+
+  async exclui(id: number): Promise<Cliente> {
+    const existeCliente = await this.clienteRepository.buscaPorId(id)
+    if(!existeCliente){
+      throw new Error('Não existe um Cliente com esse id!')
+    }
+     return await this.clienteRepository.deletar(existeCliente)
+ }
 }

@@ -42,4 +42,12 @@ export class ClienteRepository {
   const novoCliente = this.Repository.create(cliente)
   return await this.Repository.save(novoCliente);
  }
+
+ async update(id: number, cliente: ClienteDto): Promise<void> {
+     await this.Repository.update(id, cliente)
+ }
+
+ async deletar(cliente: ClienteDto): Promise<ClienteDto> {
+    return await this.Repository.remove(cliente)
+ }
 }
