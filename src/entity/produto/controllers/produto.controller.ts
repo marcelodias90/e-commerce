@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common"
 import { ProdutoService, Produto , ProdutoDto} from "../index";
 
 @Controller('produto')
-export class clienteController {
+export class ProdutoController {
     constructor(private readonly produtoService: ProdutoService) { }
 
     @Get('lista')
