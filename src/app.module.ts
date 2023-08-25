@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
-import { ClienteModule } from './entity/cliente/modules/cliente.modules';
+import { ClienteModule, ProdutoModule } from './entity/index'
 
 @Module({
   imports: [
@@ -24,6 +24,7 @@ import { ClienteModule } from './entity/cliente/modules/cliente.modules';
 
     }),
     ClienteModule,
+    ProdutoModule
   ],
 
 })
