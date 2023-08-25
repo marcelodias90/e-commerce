@@ -9,7 +9,7 @@ export class Produto {
   nome: string;
 
   @Column('int')
-  preco: Number;
+  preco: number;
 
   @Column({ length: 100 })
   descricao: string;
