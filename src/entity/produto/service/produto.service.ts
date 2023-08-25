@@ -1,7 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { ProdutoRepository } from "../repository/produto.Repository";
-import { Produto } from "../entities/produto";
-import { ProdutoDto } from "../dto/produto.dto";
+import { ProdutoRepository,  Produto, ProdutoDto} from "../index";
 import {ExistenteExcecao, IdNaoEncotradoExcecao} from '../../../presentation/errors/index'
 
 
