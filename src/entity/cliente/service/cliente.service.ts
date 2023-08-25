@@ -7,7 +7,6 @@ import { ClienteRepository } from 'src/entity/cliente/repository/cliente.Reposit
 @Injectable()
 export class ClienteService {
   constructor(
-    @InjectRepository(Cliente)
     private clienteRepository: ClienteRepository,
   ) {}
 
@@ -15,11 +14,13 @@ export class ClienteService {
      return await this.clienteRepository.Lista();
   }
 
-  async Criar(cliente: ClienteDto): Promise<Cliente> {
-    const existeCliente = await this.clienteRepository.buscaPorEmail(cliente.email)
-    if(existeCliente){
-      throw new Error('Já existe um Cliente com esse email!')
-    }
-     return await this.clienteRepository.save(cliente)
- }
+//   async Criar(cliente: ClienteDto): Promise<Cliente> {
+//     const existeCliente = await this.clienteRepository.c({
+//       where: cliente.email
+//     })
+//     if(existeCliente){
+//       throw new Error('Já existe um Cliente com esse email!')
+//     }
+//      return await this.clienteRepository.save(cliente)
+//  }
 }

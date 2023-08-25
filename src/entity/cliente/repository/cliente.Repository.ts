@@ -7,7 +7,7 @@ import { Repository } from 'typeorm';
 @Injectable()
 export class ClienteRepository {
   constructor(
-    @Inject(Cliente)
+    @InjectRepository(Cliente)
     private Repository: Repository<Cliente>,
   ) {}
 
