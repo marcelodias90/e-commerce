@@ -1,0 +1,15 @@
+[{
+    "name": "default",
+    "type": "mssql",
+    "host": "localhost",
+    "port": 1433,
+    "username": "sa",
+    "password": "Blaydex2",
+    "database": "e-commerce",
+    "entities": ["./src/entity/*.ts"],
+    "migrations": ["./src/migrations/*.ts"],
+    "cli": {
+      "migrationsDir": "./src/migrations/"
+    }
+  }]
+  
