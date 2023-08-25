@@ -12,5 +12,5 @@ export class Cliente {
   preco: Number;
 
   @Column({ length: 100 })
-  email: string;
+  descricao: string;
 }
