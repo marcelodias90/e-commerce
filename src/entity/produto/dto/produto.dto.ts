@@ -1,4 +1,4 @@
-import { Produto } from "../produto";
+import { Produto } from "../entities/produto";
 
 export class ProdutoDto extends Produto{
     readonly nome: string;
