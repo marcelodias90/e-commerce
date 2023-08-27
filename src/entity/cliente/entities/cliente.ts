@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Produto } from 'src/entity/produto';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn } from 'typeorm';
 
 @Entity('cliente')
 export class Cliente {
@@ -14,4 +15,6 @@ export class Cliente {
   @Column({ length: 100 })
   email: string;
 
+  @OneToMany(() => Produto, produto => produto.cliente)
+  produtos: Produto[];
 }
