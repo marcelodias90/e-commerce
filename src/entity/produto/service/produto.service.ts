@@ -1,7 +1,6 @@
 import { Injectable } from "@nestjs/common";
-import { ProdutoRepository,  Produto, ProdutoDto} from "../index";
-import {ExistenteExcecao, IdNaoEncotradoExcecao} from '../../../presentation/errors/index'
-
+import { ExistenteExcecao, IdNaoEncotradoExcecao } from '../../../presentation/errors/index'
+import { ProdutoRepository, Produto, ProdutoDto } from "../index";
 
 @Injectable()
 export class ProdutoService {
@@ -33,6 +32,6 @@ export class ProdutoService {
     if (!existeProduto) {
       throw new IdNaoEncotradoExcecao(id)
     }
-     await this.produtoRepository.deletar(existeProduto)
+    await this.produtoRepository.deletar(existeProduto)
   }
 }
